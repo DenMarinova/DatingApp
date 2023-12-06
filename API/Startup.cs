@@ -57,6 +57,8 @@ namespace API
 
             app.UseAuthorization();
 
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("*"));
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
