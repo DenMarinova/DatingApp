@@ -1,0 +1,16 @@
+<h1>Internal server error - go back to <a class="text-primary" routerLink="/">Home</a>!</h1>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.message}}</h5>
+
+    <p>What to do next?</p>
+
+    <ol>
+        <li>Open chrome dev tools! Then check the failing request in thr network tab</li>
+        <li>Examine the request URL - what API endpoints are you requesting?</li>
+        <li>Reproduce the problem in Postman</li>
+    </ol>
+
+    <p style="font-weight: bold;">Following is the stack trace:</p>
+
+    <code class="mt-5" style="background-color: white;">{{error.details}}</code>
+</ng-container>
